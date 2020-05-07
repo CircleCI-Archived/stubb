@@ -64,15 +64,24 @@ jobs:
           keys:
             - go-mod-v1
       - run:
+          name: "Testing"
+          command: |
+            ls -lah $GOPATH/pkg/mod
+      - run:
           name: "Download Dependancies"
-          command: cd src && go mod download
+          command: go mod download
       - run:
           name: "Run Tests"
-          command: cd src && go test
+          command: go test
       - save_cache:
           key: go-mod-v1
           paths:
-            - "/go/pkg/mod"
+            - "$GOPATH/pkg/mod"
+      - run:
+          name: "Testing"
+          command: |
+            echo $GOPATH
+            ls -lah $GOPATH/pkg/mod
   build-binaries:
     parameters:
       publish:
