@@ -62,11 +62,11 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - go-mod-v3
+            - go-mod-v4
       - run:
           name: "Testing"
           command: |
-            ls -lah $GOPATH/pkg/mod
+            #ls -lah $GOPATH/pkg/mod
             ls -lah $GOPATH
       - run:
           name: "Download Dependancies"
@@ -75,9 +75,9 @@ jobs:
           name: "Run Tests"
           command: go test
       - save_cache:
-          key: go-mod-v3
+          key: go-mod-v4
           paths:
-            - $GOPATH/pkg/mod
+            - /home/circleci/go/pkg/mod
       - run:
           name: "Testing"
           command: |
