@@ -62,11 +62,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - go-mod-v1
+            - go-mod-v2
       - run:
           name: "Testing"
           command: |
-            ls -lah $GOPATH/pkg/mod
+            #ls -lah $GOPATH/pkg/mod
+            ls -lah $GOPATH
       - run:
           name: "Download Dependancies"
           command: go mod download
@@ -74,7 +75,7 @@ jobs:
           name: "Run Tests"
           command: go test
       - save_cache:
-          key: go-mod-v1
+          key: go-mod-v2
           paths:
             - "$GOPATH/pkg/mod"
       - run:
