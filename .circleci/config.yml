@@ -66,8 +66,7 @@ jobs:
       - run:
           name: "Testing"
           command: |
-            #ls -lah $GOPATH/pkg/mod
-            ls -lah $GOPATH
+            ls -lah $GOPATH/pkg/mod
       - run:
           name: "Download Dependancies"
           command: go mod download
