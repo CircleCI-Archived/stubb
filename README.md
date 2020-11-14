@@ -9,7 +9,7 @@
 
 [![Build Status](https://circleci.com/gh/CircleCI-Public/stubb.svg?style=shield)](https://circleci.com/gh/CircleCI-Public/stubb) [![Software License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/CircleCI-Public/stubb/master/LICENSE)
 
-***This project is brand new and in alpha right now. You may notice a lack of polish and/or drastic changes.***
+***This project is no longer in active development.***
 
 `stubb` is a Docker utility tool useful for when you want to learn more about your Docker images.
 You can list and compare Docker images, their tags, and pull metrics from Docker Hub.
